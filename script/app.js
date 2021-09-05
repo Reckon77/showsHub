@@ -1,5 +1,5 @@
-const searchBox=document.querySelector("#searchBox")
 const gallery=document.querySelector('.gallery')
+const searchBar=document.querySelector("#searchBar")
 const createCard=(data)=>{
     const contentCard=document.createElement('div')
     contentCard.classList.add('content','card','my-3')
@@ -61,15 +61,11 @@ const Search=async(query)=>{
     }
 }
 
-searchBox.addEventListener("keypress",(e)=>{
-    if(e.code=='Enter'){
-        gallery.innerHTML=""
-        Search(searchBox.value)
-        searchBox.value=""
-       
-    }
-  
-   
+searchBar.addEventListener('submit',(e)=>{
+    e.preventDefault();
+    gallery.innerHTML=""
+    Search(searchBar.elements.query.value)
+    searchBar.elements.query.value=""
 })
 
 Search("Dark")
