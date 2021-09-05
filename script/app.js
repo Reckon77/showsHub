@@ -61,13 +61,14 @@ const Search=async(query)=>{
     }
 }
 
-searchBox.addEventListener("keydown",(e)=>{
+searchBox.addEventListener("keypress",(e)=>{
     if(e.code=='Enter'){
         gallery.innerHTML=""
         Search(searchBox.value)
         searchBox.value=""
        
     }
+  
    
 })
 
