@@ -1,0 +1,94 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito Sans", sans-serif;
+  background-color: #000000;
+  background-image: linear-gradient(147deg, #000000 0%, #04619f 74%);
+}
+
+#searchBox {
+  height: 2.5rem;
+  width: 15rem;
+  padding: 0.5rem;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid black;
+  background-color: #3b3737;
+  color: aliceblue;
+}
+#searchBox:focus {
+  outline: none;
+  border: 1px solid rgb(1, 204, 255);
+  box-shadow: 0 0 10px rgba(81, 203, 238, 1);
+}
+#searchBox::placeholder {
+  color: rgb(180, 180, 180);
+}
+.content {
+  position: relative;
+  width: 90%;
+  max-width: 280px;
+  margin: auto;
+  overflow: hidden;
+}
+.content .content-overlay {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.content:hover .content-overlay {
+  opacity: 1;
+}
+
+.content-image {
+  width: 100%;
+}
+
+.content-details {
+  color: #a3a3a3;
+  position: absolute;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+.white {
+  color: white;
+}
+.gold {
+  color: #ffd700;
+}
+.content:hover .content-details {
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
+.fadeIn-bottom {
+  top: 80%;
+}
+.gallery {
+  font-size: smaller;
+  color: white;
+}
+.navbar {
+  border-bottom: 0.5px solid rgb(9, 172, 248);
+  box-shadow: -4px -3px 45px 21px rgba(9, 172, 248, 0.35);
+}
